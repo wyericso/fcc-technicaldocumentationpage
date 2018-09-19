@@ -17,6 +17,15 @@ nav {
     height: 100vh;
 }
 
+header {
+    display: inline;
+}
+
+header, section > a {
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -34,7 +43,7 @@ main {
     height: 100vh;
 }
 
-h1 > a {
+section > a {
     float: right;
     display: none;
 }
@@ -49,7 +58,7 @@ h1 > a {
         height: auto;
         overflow: visible;
     }
-    h1 > a {
+    section > a {
         display: inline;
     }
 }
