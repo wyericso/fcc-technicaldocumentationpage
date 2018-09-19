@@ -13,14 +13,43 @@ body {
 
 nav {
     grid-area: navbar;
+    overflow: auto;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav-link {
     display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 main {
     grid-area: main;
     overflow: auto;
     height: 100vh;
+}
+
+h1 > a {
+    float: right;
+    display: none;
+}
+
+@media (max-width: 640px) {
+    #container {
+        grid-template-areas:
+            "navbar navbar"
+            "main main";
+    }
+    nav, main {
+        height: auto;
+        overflow: visible;
+    }
+    h1 > a {
+        display: inline;
+    }
 }
